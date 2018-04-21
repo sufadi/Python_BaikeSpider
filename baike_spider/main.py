@@ -37,7 +37,7 @@ class SpiderMain(object):
                 self.outputer.collect_data(new_data)
 
                 # 只爬取 100 条的数据
-                if(count == 1000):
+                if(count == 100000):
                     break
 
                 count = count + 1
@@ -48,8 +48,8 @@ class SpiderMain(object):
         self.outputer.output_html()
 
 if __name__ == '__main__':
-    # 入口 URL:百度百科的 Python 相关的百度词条
-    root_url = "https://baike.baidu.com/item/Python/407313"
+    # 入口 URL:百度百科的 CSDN 相关的百度词条
+    root_url = "https://blog.csdn.net/su749520"
     obj_spider = SpiderMain()
     # 启动爬虫
     obj_spider.craw(root_url)
